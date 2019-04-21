@@ -12,10 +12,17 @@ alias ...="cd ../.."
 alias c='clear'
 alias r='env zsh -l'
 alias cp="cpv --progress"
-alias motion="ssh -R 9020:localhost:8765 serveo.net"
+alias serveo="./home/mirage/serveo.sh"
 alias ng80="killall ngrok && sed -i 's/8765/80/g' /home/mirage/.ngrok2/ngrok.yml && ngrok start --all"
 alias ng8765="killall ngrok && sed -i 's/80/8765/g' /home/mirage/.ngrok2/ngrok.yml && ngrok start --all"
 alias ngrc="sudo mcedit /home/mirage/.ngrok2/ngrok.yml"
-alias webui="node webui-aria2-master/node-server.js"
-alias $d="/home/mirage/downloads/"
 alias m='mcedit'
+alias local9091='killall ssh && ssh -R 80:localhost:9091 ssh.localhost.run'
+alias local8765='killall ssh && ssh -R 80:localhost:8765 ssh.localhost.run'
+alias local80='killall ssh && ssh -R 80:localhost:80 ssh.localhost.run'
+alias net='sudo netstat -tlp | grep -E "4040|7999" && echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" && sudo netstat -nlpt | grep 127.0.0.1'
+
+d="/home/mirage/downloads/"
+usr='/usr'
+
+#https://www.tecmint.com/share-files-over-a-local-network-in-linux/
