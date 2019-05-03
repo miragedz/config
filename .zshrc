@@ -21,7 +21,10 @@ alias local9091='killall ssh && ssh -R 80:localhost:9091 ssh.localhost.run'
 alias local8765='killall ssh && ssh -R 80:localhost:8765 ssh.localhost.run'
 alias local80='killall ssh && ssh -R 80:localhost:80 ssh.localhost.run'
 alias net='sudo netstat -tlp | grep -E "4040|7999" && echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" && sudo netstat -nlpt | grep 127.0.0.1'
-
+mkcd ()
+{
+  mkdir -p -- "$1" && cd -P -- "$1"
+}
 d="/home/mirage/downloads/"
 usr='/usr'
 
