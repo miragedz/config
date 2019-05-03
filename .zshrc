@@ -25,6 +25,10 @@ mkcd ()
 {
   mkdir -p -- "$1" && cd -P -- "$1"
 }
+local ()
+{
+  killall ssh && ssh -R 80:localhost:"$1" ssh.localhost.run
+}
 d="/home/mirage/downloads/"
 usr='/usr'
 
