@@ -16,9 +16,10 @@ alias ng80="killall ngrok && sed -i 's/8765/80/g' /home/mirage/.ngrok2/ngrok.yml
 alias ng8765="killall ngrok && sed -i 's/80/8765/g' /home/mirage/.ngrok2/ngrok.yml && ngrok start --all"
 alias ngrc="sudo mcedit /home/mirage/.ngrok2/ngrok.yml"
 alias m='mcedit'
-alias net='sudo netstat -tlp | grep -E "4040|7999" && sudo netstat -nlpt'
+alias nett='sudo netstat -tlp | grep -E "tcp "'
 mkcd () { mkdir -p -- "$1" && cd -P -- "$1" }
 web () { ssh -R 80:localhost:"$1" ssh.localhost.run }
+net () { sudo netstat -tlp | grep -E ""$1"" }
 
 d="/home/mirage/Downloads"
 usr='/usr'
