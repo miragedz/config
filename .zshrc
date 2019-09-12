@@ -14,8 +14,10 @@ alias phpWeb="php -S localhost:5000"
 alias ng80="killall ngrok && sed -i 's/8765/80/g' /home/mirage/.ngrok2/ngrok.yml && ngrok start --all"
 alias ng8765="killall ngrok && sed -i 's/80/8765/g' /home/mirage/.ngrok2/ngrok.yml && ngrok start --all"
 alias m='sudo mcedit'
+alias airplay='~/RPiPlay/build/rpiplay'
 alias raspi='~/.config/monitor.sh -a'
-alias scan='sudo iwlist wlan0 scan | grep SSID'
+alias port='sudo netstat -plnt | grep 0:'
+alias scanW='sudo iwlist wlan0 scan | grep ESSID'
 mkcd () { mkdir -p -- "$1" && cd -P -- "$1" }
 web () { ssh -R 80:localhost:"$1" ssh.localhost.run }
 net () { sudo netstat -tlp | grep -E ""$1"" }
