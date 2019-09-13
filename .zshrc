@@ -11,8 +11,8 @@ alias c='clear'
 alias r='env zsh -l'
 alias cp="cpv --progress"
 alias phpWeb="php -S localhost:5000"
-alias ng80="killall ngrok && sed -i 's/8765/80/g' /home/mirage/.ngrok2/ngrok.yml && ngrok start --all"
-alias ng8765="killall ngrok && sed -i 's/80/8765/g' /home/mirage/.ngrok2/ngrok.yml && ngrok start --all"
+alias ng80="sed -i 's/8765/80/g' /home/mirage/.ngrok2/ngrok.yml && ngrok start --all && sudo systemctl restart ngrok.service"
+alias ng8765="sed -i 's/80/8765/g' /home/mirage/.ngrok2/ngrok.yml && ngrok start --all && sudo systemctl restart ngrok.service"
 alias m='sudo mcedit'
 alias airplay='~/RPiPlay/build/rpiplay'
 alias raspi='~/.config/monitor.sh -a'
@@ -20,6 +20,7 @@ alias port='sudo netstat -plnt | grep 0:'
 alias scanW='sudo iwlist wlan0 scan | grep ESSID'
 mkcd () { mkdir -p -- "$1" && cd -P -- "$1" }
 web () { ssh -R 80:localhost:"$1" ssh.localhost.run }
+ytb-mpv () { youtube-dl -o - "$1" | mpv -}
 net () { sudo netstat -tlp | grep -E ""$1"" }
 d="/home/mirage/Downloads"
 usr='/usr'
