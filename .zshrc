@@ -1,4 +1,4 @@
-export ZSH="/home/pi/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="gnzh"
 plugins=( git cp pip zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
