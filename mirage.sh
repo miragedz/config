@@ -8,8 +8,8 @@ yes | pip install youtube-dl
 clear
 #oh my zsh
 git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/plugins/zsh-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/plugins/zsh-autosuggestions
+git clone https://git.io/vo09x ~/.oh-my-zsh/plugins/zsh-syntax-highlighting
+git clone https://git.io/vbNux ~/.oh-my-zsh/plugins/zsh-autosuggestions
 rm -rf .zshrc
 echo -e ".zshrc && termux-url-opener"
 sleep2
