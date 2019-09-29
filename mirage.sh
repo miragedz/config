@@ -1,5 +1,5 @@
 #!/bin/bash
-
+oh=~/.oh-my-zsh
 echo -e "#### Install dependency packages\n"
 apt update && apt -y upgrade && apt -y install ffmpeg python aria2 openssh git ncurses-utils zsh cups nano mc apache2 v4l-utils libmariadbclient18 libpq5 python-pip python-dev libssl-dev libcurl4-openssl-dev libjpeg-dev libz-dev php php-mbstring hostapd dnsmasq WiringPi samba samba-common-bin
 pip install --upgrade pip
@@ -7,9 +7,9 @@ python -m pip install requests
 yes | pip install youtube-dl
 clear
 #oh my zsh
-git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-git clone https://git.io/vo09x ~/.oh-my-zsh/plugins/zsh-syntax-highlighting
-git clone https://git.io/vbNux ~/.oh-my-zsh/plugins/zsh-autosuggestions
+git clone https://github.com/robbyrussell/oh-my-zsh.git $oh
+git clone https://git.io/vo09x $oh/plugins/zsh-syntax-highlighting
+git clone https://git.io/vbNux $oh/plugins/zsh-autosuggestions
 rm -rf .zshrc
 echo -e ".zshrc && termux-url-opener"
 sleep2
