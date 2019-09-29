@@ -14,7 +14,7 @@ rm -rf .zshrc
 echo -e ".zshrc && termux-url-opener"
 sleep2
 mkdir -p ~/bin
-aria2c https://raw.githubusercontent.com/kingrachid2000/Mobile/master/.zshrc
+aria2c https://git.io/JeZxr #install ohmyzh
 aria2c https://raw.githubusercontent.com/kingrachid2000/Mobile/master/termux-url-opener -o bin/aria2c https://raw.githubusercontent.com/kingrachid2000/Mobile/master/termux-url-opener -o bin/termux-url-opener
 aria2c https://gitlab.com/st42/termux-sudo/raw/master/sudo
 chsh -s zsh
