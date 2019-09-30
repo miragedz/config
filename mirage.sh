@@ -6,15 +6,20 @@ pip install --upgrade pip
 python -m pip install requests
 yes | pip install youtube-dl
 clear
-#oh my zsh
-git clone https://github.com/robbyrussell/oh-my-zsh.git $oh
-git clone https://git.io/vo09x $oh/plugins/zsh-syntax-highlighting
-git clone https://git.io/vbNux $oh/plugins/zsh-autosuggestions
+
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 rm -rf .zshrc
-echo -e ".zshrc && termux-url-opener"
+https://raw.githubusercontent.com/kingrachid2000/config/master/.zshrc -o .zshrc
+mv $oh/themes && mkdir -p $oh/themes
+curl https://raw.githubusercontent.com/kingrachid2000/config/master/mirage.zsh-theme -o mirage.zsh-theme $oh/themes 
+
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $oh/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions $oh/plugins/zsh-autosuggestions
+
+
 sleep2
 mkdir -p ~/bin
-aria2c https://git.io/JeZxr #install ohmyzh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 aria2c https://raw.githubusercontent.com/kingrachid2000/Mobile/master/termux-url-opener -o bin/aria2c https://raw.githubusercontent.com/kingrachid2000/Mobile/master/termux-url-opener -o bin/termux-url-opener
 aria2c https://gitlab.com/st42/termux-sudo/raw/master/sudo
 chsh -s zsh
