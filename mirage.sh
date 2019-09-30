@@ -7,7 +7,7 @@ python -m pip install requests
 yes | pip install youtube-dl
 clear
 
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 rm -rf .zshrc
 aria2cs https://git.io/JenZH -o ~/
 mv $oh/themes && mkdir -p $oh/themes
