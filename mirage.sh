@@ -9,9 +9,9 @@ clear
 
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 rm -rf .zshrc
-https://raw.githubusercontent.com/kingrachid2000/config/master/.zshrc -o .zshrc
+aria2cs https://git.io/JenZH -o ~/
 mv $oh/themes && mkdir -p $oh/themes
-curl https://raw.githubusercontent.com/kingrachid2000/config/master/mirage.zsh-theme -o mirage.zsh-theme $oh/themes 
+aria2c https://git.io/JenZ9 -d $oh/themes/
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $oh/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions $oh/plugins/zsh-autosuggestions
@@ -20,8 +20,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions $oh/plugins/zsh-autos
 sleep2
 mkdir -p ~/bin
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-aria2c https://raw.githubusercontent.com/kingrachid2000/Mobile/master/termux-url-opener -o bin/aria2c https://raw.githubusercontent.com/kingrachid2000/Mobile/master/termux-url-opener -o bin/termux-url-opener
-aria2c https://gitlab.com/st42/termux-sudo/raw/master/sudo
+aria2c https://raw.githubusercontent.com/kingrachid2000/Mobile/master/termux-url-opener -o bin/aria2c https://gitlab.com/st42/termux-sudo/raw/master/sudo
 chsh -s zsh
 dos2unix ~/bin/termux-url-opener
 chmod u+x ~/bin/termux-url-opener
