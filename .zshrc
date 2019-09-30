@@ -1,5 +1,5 @@
 export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="gnzh"
+ZSH_THEME="mirage"
 plugins=( git cp pip zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 alias i="sudo apt install"
