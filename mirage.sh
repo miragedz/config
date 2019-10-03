@@ -9,9 +9,13 @@ clear
 
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 rm -rf .zshrc
-aria2cs https://git.io/JenZH -o ~/
-mv $oh/themes && mkdir -p $oh/themes
-aria2c https://git.io/JenZ9 -d $oh/themes/
+aria2c https://git.io/JenZH -d ~/ #.zshrc
+aria2c https://git.io/Jeco7 -d ~/
+mv ~/.p10k.zsh_Pc ~/.p10k.zsh
+rm -rf $oh/themes && mkdir -p $oh/themes
+aria2c https://git.io/JenZ9 -d $oh/themes
+aria2c https://git.io/Jecor -d ~/.fonts
+sudo fc-cache -f -v
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $oh/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions $oh/plugins/zsh-autosuggestions
