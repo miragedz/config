@@ -46,6 +46,9 @@ if git clone --depth=1 https://github.com/zsh-users/zsh-history-substring-search
 else
 	cd ~/.oh-my-zsh/custom/plugins/zsh-history-substring-search && git pull
 fi
+if git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/themes/powerlevel10k
+else
+	cd ~/.oh-my-zsh/themes/powerlevel10k && git pull
 
 # INSTALL FONTS
 
@@ -65,17 +68,6 @@ wget -N https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/Hack/Re
 wget -N https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/RobotoMono/Regular/complete/Roboto%20Mono%20Nerd%20Font%20Complete.ttf -P ~/.fonts/
 
 fc-cache -fv ~/.fonts
-
-# if git clone --depth=1 https://github.com/gabrielelana/awesome-terminal-fonts.git --depth=1 ~/.quickzsh/awesome_terminal_fonts; then :
-# else
-# 	cd ~/.quickzsh/awesome_terminal_fonts && git pull
-# fi
-#
-# if ~/.quickzsh/awesome_terminal_fonts/install.sh; then
-# 	echo -e "\nawesome_terminal_fonts Installed\n"
-# else
-# 	echo -e "\nawesome_terminal_fonts Installation Failed\n"
-# fi
 
 if git clone --depth=1 https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k; then :
 else
@@ -122,12 +114,6 @@ else
 fi
 
 
-# source ~/.zshrc
-echo -e "\nSudo access is needed to change default shell\n"
-
-if chsh -s $(which zsh) && /bin/zsh -i -c upgrade_oh_my_zsh; then
-	echo -e "Installation Successful, exit terminal and enter a new session"
-else
-	echo -e "Something is wrong"
-fi
+chsh -s $(which zsh)
+env zsh -l
 exit
