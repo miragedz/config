@@ -8,23 +8,26 @@ yes | pip install youtube-dl
 clear
 
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $oh/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions $oh/plugins/zsh-autosuggestions
+
 rm -rf .zshrc
 aria2c https://git.io/JenZH -d ~/ #.zshrc
 aria2c https://git.io/Jeco7 -d ~/
-mv ~/.p10k.zsh_Pc ~/.p10k.zsh
+mv ~/.p10k.zsh_PC ~/.p10k.zsh
+git clone https://github.com/romkatv/powerlevel10k.git $oh/themes/powerlevel10k
 rm -rf $oh/themes && mkdir -p $oh/themes
 aria2c https://git.io/JenZ9 -d $oh/themes
 aria2c https://git.io/Jecor -d ~/.fonts
 sudo fc-cache -f -v
 
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $oh/plugins/zsh-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-autosuggestions $oh/plugins/zsh-autosuggestions
+
 
 
 sleep2
 mkdir -p ~/bin
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-aria2c https://raw.githubusercontent.com/kingrachid2000/Mobile/master/termux-url-opener -o bin/aria2c https://gitlab.com/st42/termux-sudo/raw/master/sudo
+aria2c https://raw.githubusercontent.com/kingrachid2000/Mobile/master/termux-url-opener -o bin/
+aria2c https://gitlab.com/st42/termux-sudo/raw/master/sudo
 chsh -s zsh
 dos2unix ~/bin/termux-url-opener
 chmod u+x ~/bin/termux-url-opener
