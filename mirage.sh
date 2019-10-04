@@ -7,7 +7,7 @@ python -m pip install requests
 yes | pip install youtube-dl
 clear
 
-sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+sh -c "$(wget https://raw.githubusercontent.com/kingrachid2000/config/master/zh_auto.sh -O -)"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $oh/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions $oh/plugins/zsh-autosuggestions
 
