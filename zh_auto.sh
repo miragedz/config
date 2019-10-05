@@ -16,39 +16,17 @@ if mv -n ~/.zshrc ~/.zshrc-backup; then	# if already have zshrc-backup, keep it,
 fi
 
 
-echo -e "Installing oh-my-zsh\n"
-if git clone --depth=1 git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh; then
-	echo -e "Installed OH-MY-ZSH\n"
-fi
+git clone --depth=1 git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
-cp -f .zshrc ~/
 
 
 mkdir ~/.quickzsh		# external plugins, things, will be instlled in here
 
-
-if git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/plugins/zsh-autosuggestions; then :
-else
-	cd ~/.oh-my-zsh/plugins/zsh-autosuggestions && git pull
-fi
-
-if git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting; then :
-else
-	cd ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting && git pull
-fi
-
-if git clone --depth=1 https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions; then :
-else
-	cd ~/.oh-my-zsh/custom/plugins/zsh-completions && git pull
-fi
-
-if git clone --depth=1 https://github.com/zsh-users/zsh-history-substring-search ~/.oh-my-zsh/custom/plugins/zsh-history-substring-search; then :
-else
-	cd ~/.oh-my-zsh/custom/plugins/zsh-history-substring-search && git pull
-fi
-if git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/themes/powerlevel10k
-else
-	cd ~/.oh-my-zsh/themes/powerlevel10k && git pull
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions
+git clone https://github.com/zsh-users/zsh-history-substring-search ~/.oh-my-zsh/custom/plugins/zsh-history-substring-search
+git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/themes/powerlevel10k
 
 # INSTALL FONTS
 
@@ -69,10 +47,6 @@ wget -N https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/RobotoM
 
 fc-cache -fv ~/.fonts
 
-if git clone --depth=1 https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k; then :
-else
-	cd ~/.oh-my-zsh/custom/themes/powerlevel9k && git pull
-fi
 
 if git clone --depth 1 https://github.com/junegunn/fzf.git ~/.quickzsh/fzf; then :
 else
