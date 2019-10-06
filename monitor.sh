@@ -9,10 +9,6 @@ GET_WAN_IP="https://www.ezservermonitor.com/myip"
 # Hosts to ping
 PING_HOSTS=("google.com" "facebook.com" "yahoo.com")
  
-# Services port number to check
-# syntax :
-#   SERVICES_NAME[port_number]="label"
-#   SERVICES_HOST[port_number]="localhost"
 SERVICES_NAME[445]="SAMBA Server"
 SERVICES_HOST[445]="localhost"
  
@@ -27,9 +23,7 @@ SERVICES_HOST[8765]="localhost"
 
 SERVICES_NAME[5900]="VNC Server"
 SERVICES_HOST[5900]="localhost"
- 
-# Temperatures blocks (true for enable)
-TEMP_ENABLED=false
+
 
 # Text color : RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE
 THEME_TEXT=GREEN
@@ -181,8 +175,6 @@ if [ $# -ge 1 ] ; then
             s) services ;;
             a) showAll ;;
             -) case $OPTARG in
-                  help | usage) showHelp; exit ;;
-                  version) showVersion; exit ;;
                   all) showAll; exit ;;
                   clear) clear ;;
                   system) system ;;
@@ -193,7 +185,6 @@ if [ $# -ge 1 ] ; then
                   network) network ;;
                   ping) ping ;;
                   disk) disk_space ;;
-                  temperatures) hdd_temperatures; system_temperatures ;;
                   *) exit ;;
                esac ;;
             ?) echo "Option -$OPTARG inconnue"; exit ;;
