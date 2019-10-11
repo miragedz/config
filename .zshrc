@@ -1,8 +1,9 @@
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
-plugins=( git cp pip zsh-syntax-highlighting)
+plugins=( git cp pip zsh-syntax-highlighting zsh-history-substring-search zsh-completions)
 source $ZSH/oh-my-zsh.sh
+
 alias i="sudo apt install"
 alias r="sudo apt remove"
 alias u="sudo apt-get autoremove && sudo dpkg --configure -a && sudo apt -f install && sudo apt-get --fix-broken install && sudo apt dist-upgrade && sudo apt update && sudo pip install --upgrade pip"
@@ -19,6 +20,7 @@ alias airplay='~/RPiPlay/build/rpiplay'
 alias raspi='~/.config/monitor.sh -a'
 alias port='sudo netstat -plnt | grep 0:'
 alias scanW='sudo iwlist wlan0 scan | grep ESSID'
+
 mkcd () { mkdir -p -- "$1" && cd -P -- "$1" }
 web () { ssh -R 80:localhost:"$1" ssh.localhost.run }
 ytb-mpv () { youtube-dl -o - "$1" | mpv -}
