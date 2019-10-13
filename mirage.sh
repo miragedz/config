@@ -8,15 +8,11 @@ yes | pip install youtube-dl
 clear
 
 sh -c "$(wget https://raw.githubusercontent.com/kingrachid2000/config/master/zh_auto.sh -O -)"
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $oh/plugins/zsh-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-autosuggestions $oh/plugins/zsh-autosuggestions
 
 rm -rf .zshrc
 aria2c https://git.io/JenZH -d ~/ #.zshrc
-aria2c https://git.io/Jeco7 -d ~/
-mv ~/.p10k.zsh_PC ~/.p10k.zsh
-git clone https://github.com/romkatv/powerlevel10k.git $oh/themes/powerlevel10k
-rm -rf $oh/themes && mkdir -p $oh/themes
+aria2c https://git.io/Je8IP -d ~/
+
 aria2c https://git.io/JenZ9 -d $oh/themes
 aria2c https://git.io/Jecor -d ~/.fonts
 sudo fc-cache -f -v
