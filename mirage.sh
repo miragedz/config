@@ -11,10 +11,10 @@ sh -c "$(wget https://raw.githubusercontent.com/kingrachid2000/config/master/zh_
 
 rm -rf .zshrc
 aria2c https://git.io/JenZH -d ~/ #.zshrc
-aria2c https://git.io/Je8IP -d ~/
+aria2c https://git.io/Je8IP -d ~/ #p10k.zh
 
 aria2c https://git.io/JenZ9 -d $oh/themes
-aria2c https://git.io/Jecor -d ~/.fonts
+aria2c https://git.io/Jecor -d ~/.termux #font
 sudo fc-cache -f -v
 
 
