@@ -9,7 +9,7 @@ Restart=always
 RestartSec=1min
 StandardOutput=null
 StandardError=null
-ExecStart=/opt/ngrok/ngrok start -config=/home/mirage/.ngrok2/ngrok.yml --all
+ExecStart=/usr/bin/ngrok start -config=$HOME/.config/ngrok2/ngrok.yml --all
 ExecStop=/usr/bin/killall ngrok
 
 [Install]
