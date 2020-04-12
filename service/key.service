@@ -1,0 +1,16 @@
+[Unit]
+Description=My service
+After=network.target
+
+[Service]
+Environment=DISPLAY=:0
+ExecStart=/usr/bin/python3 /home/pi/gpio/key.py
+ExecStop=/usr/bin/pkill -9 -f key.py
+WorkingDirectory=/home/pi/gpio
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
