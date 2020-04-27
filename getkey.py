@@ -1,16 +1,14 @@
-from getkey import getkey, keys
-from signal import pause
-
-
-x = True
+import curses, os
+stdscr = curses.initscr()
+curses.cbreak()
+stdscr.keypad(1)
 while True:
-    key = getkey()
-    
-    if key == keys.ENTER and x == True:
-        print("ENTER!")
-        x = not x 
-    else:
-        print("ok!")
-        x = not x
-
-pause()
+    c = stdscr.getch()
+    if c == ord('q'):
+        break 
+    elif c == curses.KEY_UP:
+        os.system("python3 /home/pi/gpio/relay24.py start")
+    elif c == curses.KEY_DOWN:
+        os.system("python3 /home/pi/gpio/relay24.py stop")
+    elif c == ord('o'):
+        os.system("python3 /home/pi/gpio/relay24.py stop")
