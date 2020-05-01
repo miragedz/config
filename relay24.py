@@ -1,29 +1,31 @@
 #!/bin/python3
 
-import RPi.GPIO as GPIO
-import sys
+def other():
+	print ("start / stop ")
+	sys.exit (1)
 
-GPIO.setmode(GPIO.BCM)
-
-def on():
-	GPIO.setup(24, GPIO.OUT)
-def off():
-	GPIO.setup(24, GPIO.IN)
-
+def state(sts):
+	import RPi.GPIO as GPIO
+	GPIO.setmode(GPIO.BCM)
+	if sts == "start" :
+		GPIO.setup(15, GPIO.OUT)
+	elif sts == "stop" :
+		GPIO.setup(15, GPIO.IN)
+		GPIO.cleanup()
+	else:
+		print ("start / stop")
 
 def main():
-	action = sys.argv[1]
-
-	if len (sys.argv) != 2 :
-	    print ("one argument please ")
-	    sys.exit (1)
+	import sys
+	sts = sys.argv[1]
+	ln = len (sys.argv)
+	if ln == 2 :
+		state(sts)
 	else:
-		if action == "start" :
-			on()
-		elif action == "stop" :
-			off()
-		else:
-			print ("start/stop")
-	
+		other()
+
 if __name__ == "__main__":
-	main()			
+    try:
+        main()
+    except:
+        print("offfff")		
