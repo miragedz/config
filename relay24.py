@@ -1,17 +1,13 @@
-#!/bin/python3
-
 def other():
 	print ("start / stop ")
 	sys.exit (1)
 
 def state(sts):
-	import RPi.GPIO as GPIO
-	GPIO.setmode(GPIO.BCM)
+	import os
 	if sts == "start" :
-		GPIO.setup(15, GPIO.OUT)
+		os.system('pigs m 15 w')
 	elif sts == "stop" :
-		GPIO.setup(15, GPIO.IN)
-		GPIO.cleanup()
+		os.system('pigs m 15 r')
 	else:
 		print ("start / stop")
 
@@ -28,4 +24,5 @@ if __name__ == "__main__":
     try:
         main()
     except:
-        print("offfff")		
+        print("offfff")
+
