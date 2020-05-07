@@ -2,6 +2,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+
 export ZSH="$HOME/.oh-my-zsh"
 export DISPLAY=:0.0
 ZSH_THEME="powerlevel10k/powerlevel10k"
@@ -27,6 +28,7 @@ alias raspi="~/.config/monitor.sh -a"
 alias port="sudo netstat -plnt | grep 0:"
 alias scanW="sudo iwlist wlan0 scan | grep ESSID"
 alias p="python3"
+alias ls="ls -A --color=auto"
 alias cfg="cd ~/.config"
 alias ldm="sudo systemctl start lightdm.service"
 alias key="python3 ~/gpio/key.py"
