@@ -7,7 +7,7 @@ export ZSH="$HOME/.oh-my-zsh"
 export DISPLAY=:0.0
 ZSH_THEME="powerlevel10k/powerlevel10k"
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
-plugins=( git cp pip sudo zsh-syntax-highlighting zsh-autosuggestions tmux systemd wp-cli python pylint pip npm github cp adb )
+plugins=( git cp pip npm sudo  adb tmux zsh-syntax-highlighting zsh-autosuggestions  systemd wp-cli python pylint github)
 source $ZSH/oh-my-zsh.sh
 alias i="sudo apt install"
 alias u="sudo apt-get autoremove && sudo dpkg --configure -a && sudo apt -f install && sudo apt-get --fix-broken install && sudo apt dist-upgrade && sudo apt update && sudo pip install --upgrade pip"
@@ -32,6 +32,7 @@ alias ls="ls -A --color=auto"
 alias cfg="cd ~/.config"
 alias ldm="sudo systemctl start lightdm.service"
 alias key="python3 ~/gpio/key.py"
+alias rmdir="rmdir --ignore-fail-on-non-empty"
 
 kp () { sudo pkill -9 -f "$1" }
 pp () { ps -ef | grep "$1" }
@@ -45,10 +46,10 @@ net () { sudo netstat -tlp | grep -E ""$1"" }
 vnc () { sudo systemctl "$1" vncserver-x11-serviced.service }
 relay24 () { case "$1" in
           start)
-            python3 /home/pi/gpio/relay24.py start
+            pigs m 15 w
           ;;
           stop)
-            python3 /home/pi/gpio/relay24.py stop
+            pigs m 15 r
             ;;
           *)
             echo "Usage: {start|stop}"
@@ -58,5 +59,6 @@ relay24 () { case "$1" in
         
          }
 
-clear
+
+
 #https://www.tecmint.com/share-files-over-a-local-network-in-linux/
