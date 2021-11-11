@@ -30,7 +30,7 @@ alias airplay="~/RPiPlay/build/rpiplay"
 alias port="netstat -at"
 alias scanW="sudo iwlist wlp2s0 scan | grep ESSID"
 alias p="python3"
-alias ls="ls -A --color=auto"
+alias ls="exa -l -a --icons"
 alias cfg="cd ~/.config"
 alias ldm="sudo systemctl start lightdm.service vncserver-x11-serviced.service"
 alias rmdir="sudo rmdir --ignore-fail-on-non-empty"
@@ -57,12 +57,12 @@ key () { case "$1" in
             ;;
         esac
         }
-T () { if [[ -z $1 ]]
+t () { if [[ -z $1 ]]
         then
-            exa -T
+            exa -T --icons
             exit 1
         else
-            exa -T --level=$1
+            exa -T --level=$1 --icons
             exit 1          
         fi
         }
