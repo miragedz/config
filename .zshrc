@@ -79,6 +79,7 @@ clear
 # sed -i '12,$d' filename.txt # Delete from 12th line to last line
 # sed -i '/abc/d' filename.txt # Delete pattern matching line
 # sed -i -e '3 s/^#//' filename.txt #remove ine 3th line le #caracter
+# sed -r 's/.{28}//' file.sh   del first 28th caracter
 
 #-n VAR - True if the length of VAR is greater than zero.
 #-z VAR - True if the VAR is empty.
