@@ -19,18 +19,17 @@ alias c="clear"
 alias code="sudo code --user-data-dir Documents/"
 alias a="sudo arduino"
 alias r="env zsh -l"
-alias gdm="sudo systemctl restart gdm"
+alias termshark="sudo termshark"
 alias cp="cpv --progress"
 alias disk="sudo fdisk -l | grep "/dev/sd""
-alias Webphp="php -S localhost:8000"
 alias mc="sudo mc"
-alias m="sudo mcedit"
-alias n="nano -m"
-alias airplay="~/RPiPlay/build/rpiplay"
+alias n="micro"
+alias top="bashtop"
 alias port="netstat -at"
 alias scanW="sudo iwlist wlp2s0 scan | grep ESSID"
 alias p="python3"
-alias ls="exa -l -a --icons"
+alias z="zellij"
+alias ls="exa  -a --icons"
 alias cfg="cd ~/.config"
 alias ldm="sudo systemctl start lightdm.service vncserver-x11-serviced.service"
 alias rmdir="sudo rmdir --ignore-fail-on-non-empty"
@@ -44,30 +43,18 @@ lt () { lt --port "$1" }
 mnt () { mkdir -p /mnt/"$1" && sudo mount /dev/"$1" /mnt/"$1" }
 rmnt () { unmount /mnt/"$1" }
 web () { ssh -R 80:localhost:"$1" ssh.localhost.run }
-ytb-mpv () { youtube-dl -o - "$1" | mpv -}
-net () { sudo netstat -tlp | grep -E ""$1"" }
-cctv () { sudo systemctl "$1" motion.service motioneye.service }
-samba () { sudo systemctl "$1" smbd.service }
-key () { case "$1" in
-          stop | off) sed -i '10d' ~/.zshrc ;;
-          start | on) sed -i '10 i tmux' ~/.zshrc ;;
-          *)
-            echo "Usage: {start|stop}"
-            exit 1
-            ;;
-        esac
-        }
 t () { if [[ -z $1 ]]
         then
-            exa -T --icons
+            exa -T -a --icons
             exit 1
         else
-            exa -T --level=$1 --icons
-            exit 1          
+            exa -T -a --level=$1 --icons
+            exit 1
         fi
         }
 clear
 
+# echo 4 | sudo tee /sys/devices/platform/dell-laptop/leds/dell\:\:kbd_backlight/brightness    keyboard backlight
 #[[ -f /etc/resolv.conf && -f /etc/hosts ]] && echo "Both files exist.
 #[ -f /etc/resolv.conf ] && { echo "$FILE exist"; echo "sdsadasdist"; } || echo "$FILE does not exist"
 #http://tiswww.case.edu/php/chet/bash/bash.html#lbBW
@@ -79,7 +66,6 @@ clear
 # sed -i '12,$d' filename.txt # Delete from 12th line to last line
 # sed -i '/abc/d' filename.txt # Delete pattern matching line
 # sed -i -e '3 s/^#//' filename.txt #remove ine 3th line le #caracter
-# sed -r 's/.{28}//' file.sh   del first 28th caracter
 
 #-n VAR - True if the length of VAR is greater than zero.
 #-z VAR - True if the VAR is empty.
