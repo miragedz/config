@@ -1,4 +1,4 @@
-#Samba :
+# Samba :
 #/etc/samba/smb.conf
 
 workgroup = WORKGROUP
