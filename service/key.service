@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Environment=DISPLAY=:0
-ExecStart=/usr/bin/python3 /home/pi/gpio/key.py
+ExecStart=/usr/bin/python3 /home/pi/mirage/key.py
 ExecStop=/usr/bin/pkill -9 -f key.py
 WorkingDirectory=/home/pi/gpio
 StandardOutput=inherit
