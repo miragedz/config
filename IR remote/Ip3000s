@@ -1,4 +1,4 @@
-# table ip3000s, type: NEC
+# table ip3000s, type: nec
 0x45  KEY_UP
 0x46  KEY_LEFT
 0xd  KEY_RIGHT
