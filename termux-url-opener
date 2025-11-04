@@ -11,7 +11,7 @@ pause(){
 YTB(){
 	echo "          mirage Studio"
 
-	echo "For audio only press 1"
+	echo "ydl press 1"
 	echo "For video 360p press 2"
 	echo "For video 480p press 3"
 	echo "For video 720p press 4"
