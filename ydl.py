@@ -10,7 +10,7 @@ def install_dependencies():
         print("Installation de yt-dlp...")
         subprocess.run([sys.executable, "-m", "pip", "install", "yt-dlp"], check=True)
 
-def download_video(url, output_dir="storage/downloads"):
+def download_video($1, output_dir="storage/downloads"):
     """Télécharger une vidéo simplement"""
     import yt_dlp
 
@@ -21,7 +21,7 @@ def download_video(url, output_dir="storage/downloads"):
 
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-            ydl.download([url])
+            ydl.download([$1])
         print("✅ Téléchargement terminé!")
     except Exception as e:
         print(f"❌ Erreur: {e}")
@@ -31,7 +31,7 @@ if __name__ == "__main__":
 
     if len(sys.argv) > 1:
         url = sys.argv[1]
-        download_video(url)
+        download_video($1)
     else:
         url = input("🎬 Entrez l'URL de la vidéo: ")
         download_video(url)
