@@ -33,7 +33,6 @@ if __name__ == "__main__":
         url = sys.argv[1]
         download_video(url)
     else:
-     #   url = input("🎬 Entrez l'URL de la vidéo: ")
-       # download_video(url)
-        url =( $1)
+        url = input("🎬 Entrez l'URL de la vidéo: ")
         download_video(url)
+        
