@@ -35,5 +35,5 @@ if __name__ == "__main__":
     else:
      #   url = input("🎬 Entrez l'URL de la vidéo: ")
        # download_video(url)
-        url = $1
+        url =( $1)
         download_video(url)
