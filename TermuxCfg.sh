@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/data/data/com.termux/files/usr/bin/env
 oh=~/.oh-my-zsh
 echo -e "#### Install dependency packages\n"
 sudo apt update && apt -y upgrade && apt -y install ffmpeg micro  zsh git aria2 openssh git  zsh cups   v4l-utils libpq5 python-pip python-dev libssl-dev libcurl4-openssl-dev libjpeg-dev libz-dev php php-mbstring hostapd dnsmasq samba samba-common-bin
