@@ -1,2 +1,2 @@
 # Samba :
-[text hiere](https://github.com/pikvm/pikvm)
+[PIKVM](https://github.com/pikvm/pikvm)
