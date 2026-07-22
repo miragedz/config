@@ -12,15 +12,10 @@ clear
 sh -c "$(wget https://raw.githubusercontent.com/kingrachid2000/config/master/zh_auto.sh -O -)"
 
 rm -rf .zshrc
+echo -e "#### update .zshrc"
 aria2c https://git.io/JenZH -d ~/ #.zshrc
 aria2c https://git.io/Je8IP -d ~/ #p10k.zh
 
 aria2c https://git.io/JenZ9 -d $oh/themes
-aria2c https://git.io/Jecor -d ~/.termux #font
 sudo fc-cache -f -v
-
-chsh -s zsh
-clear
-dos2unix .zshrc
-env zsh -l
 clear
