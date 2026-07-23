@@ -11,7 +11,7 @@ plugins=(
   )
 source $ZSH/oh-my-zsh.sh
 alias i="sudo apt install"
-alias u="sudo apt-get autoremove && sudo dpkg --configure -a && sudo apt -f install && sudo apt-get --fix-broken install && sudo apt dist-upgrade && sudo apt update && sudo pip install --upgrade pip"
+alias u="sudo apt-get autoremove && sudo dpkg --configure -a && sudo apt -f install && sudo apt-get --fix-broken install && sudo apt dist-upgrade && sudo apt update"
 alias ..="cd .."
 alias ...="cd ../.."
 alias pi="sudo arp-scan --interface=wlp2s0 --localnet | grep Raspberry"
