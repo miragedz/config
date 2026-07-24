@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 oh=~/.oh-my-zsh
 echo -e "#### Install dependency packages\n"
-sudo apt update && sudo apt -y upgrade && sudo apt -y install ffmpeg micro  zsh git aria2 eza git zsh cups  v4l-utils  libz-dev  hostapd dnsmasq samba samba-common-bin
+sudo apt update && sudo apt -y upgrade && sudo apt -y install ffmpeg micro  zsh git code aria2 eza git zsh cups  v4l-utils  libz-dev  hostapd dnsmasq samba samba-common-bin
 sudo chmod 777 /var/lib/samba/usershares
 clear
 
