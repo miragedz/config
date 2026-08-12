@@ -2,6 +2,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+autoload -U zmv
 export ZSH="$HOME/.oh-my-zsh"
 export DISPLAY=:0.0
 ZSH_THEME="powerlevel10k/powerlevel10k"
