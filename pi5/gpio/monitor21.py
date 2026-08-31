@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
 """
+gpio_button_monitor.py
+
+Monitor GPIO21 on /dev/gpiochip0 (Raspberry Pi 5, Raspberry Pi OS "Trixie")
+using libgpiod v2 Python bindings and invoke ./switch.sh ON/OFF whenever the
+button is pressed or released.
+
+Requires:
+    sudo apt install python3-gpiod      # libgpiod >= 2.0 (default on Trixie)
+
 Wiring assumption (default):
     GPIO21 -- button -- GND   (active-low, internal pull-up enabled)
     Pressed  -> line reads LOW  -> falling edge -> switch.sh ON
@@ -127,19 +136,6 @@ def main() -> None:
 
     if not args.script.exists():
         print(f"[ERROR] switch.sh not found at {args.script}", file=sys.stderr)
-        sys.exit(1)
-
-    monitor(
-        chip_path=args.chip,
-        line_offset=args.line,
-        script_path=args.script,
-        active_low=args.active_low,
-        debounce_us=args.debounce_us,
-    )
-
-
-if __name__ == "__main__":
-    main()ch.sh not found at {args.script}", file=sys.stderr)
         sys.exit(1)
 
     monitor(
